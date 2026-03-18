@@ -1,3 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+.color-transition {
+  @apply transition-colors duration-200;
+}
+
+:root {
+  --font-base: 'IBM Plex Sans KR', sans-serif;
+  --font-point: 'Black Han Sans', sans-serif;
+  --font-accent: 'Gugi', cursive;
+  --font-reading: 'Gowun Batang', serif;
+}
+
+html,
+body {
+  font-family: var(--font-base);
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-headline {
+  animation: hero-fade-up 700ms ease-out both;
+  text-wrap: balance;
+}
