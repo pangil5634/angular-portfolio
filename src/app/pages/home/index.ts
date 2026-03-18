@@ -46,7 +46,7 @@ import { TECH_SKILL_SECTIONS } from '../../constants/tech-skills';
 
       <div>
         <p class="mb-3 text-2xl font-bold text-[#FF5F00]">| Tech Skills</p>
-        <p class="mb-3">
+        <p class="mb-6 text-gray-700">
           실제 프로젝트에 적용하며 검증한 기술 스택으로, 지속적으로 확장하고 발전시키고 있습니다.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -67,7 +67,9 @@ import { TECH_SKILL_SECTIONS } from '../../constants/tech-skills';
 
       <div>
         <p class="mb-3 text-2xl font-bold text-[#FF5F00]">| Main Project</p>
-        <p class="mb-6">실제 문제를 정의하고 해결하며 완성한 서비스 중심 프로젝트입니다.</p>
+        <p class="mb-6 text-gray-700">
+          실제 문제를 정의하고 해결하며 완성한 서비스 중심 프로젝트입니다.
+        </p>
         <div class="flex flex-col gap-5">
           @for (project of mainProjects(); track project.name; let idx = $index) {
             <article
@@ -88,7 +90,7 @@ import { TECH_SKILL_SECTIONS } from '../../constants/tech-skills';
                   <h2 class="text-xl font-bold leading-tight">{{ project.name }}</h2>
                   @if (project.isOperating) {
                     <span
-                      class="rounded-full bg-emerald-100 flex justify-center min-w-15 px-3 py-1 text-xs font-semibold text-emerald-700"
+                      class="rounded-full bg-emerald-100 flex justify-center min-w-15 px-2 md:px-3 py-1 text-xs font-semibold text-emerald-700"
                     >
                       운영 중
                     </span>
