@@ -18,7 +18,7 @@ import { TECH_SKILL_SECTIONS } from '../../constants/tech-skills';
             <img
               ngSrc="/images/profile.jpeg"
               width="130"
-              height="400"
+              height="170"
               alt="팡일 프로필 이미지"
               class="block rounded-2xl ring-1 ring-white/60 transition duration-300 hover:scale-[1.02]"
             />
