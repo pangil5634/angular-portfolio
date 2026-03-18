@@ -33,6 +33,18 @@
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </p>
 
+## Architecture
+
+<p align="center">
+  <img src="./public/images/architecture.png" alt="service architecture" width="100%" />
+</p>
+
+- `Client`: Vercel에서 제공하는 정적 Angular 번들을 로드하고 SPA 라우팅으로 화면 전환
+- `Source`: GitHub Repository(main / PR) 기반으로 변경 이력 관리
+- `CI`: GitHub Actions에서 `npm ci`, `npm run build`, `npm run test -- --watch=false` 수행
+- `CD`: main 브랜치 기준 CI 성공 시 Vercel CLI로 프로덕션 배포
+- `Hosting`: Vercel이 빌드 결과물을 CDN으로 서빙
+
 ## Why Angular?
 
 React/Next.js 기반으로 개발해오던 중,
